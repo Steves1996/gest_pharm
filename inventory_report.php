@@ -24,7 +24,7 @@ $dto = isset($_GET['date_to']) ? $_GET['date_to'] : date("Y-m-d");
                     <button class="btn btn-primary rounded-0" id="filter" type="button"><i class="fa fa-filter"></i>
                         Filter
                     </button>
-                    <button class="btn btn-success rounded-0" id="print" type="button"><i class="fa fa-print"></i> Print
+                    <button class="btn btn-success rounded-0" id="print" type="button" onclick="Convert_HTML_To_PDF()"><i class="fa fa-print"></i> Print
                     </button>
                 </div>
             </div>
@@ -45,11 +45,11 @@ $dto = isset($_GET['date_to']) ? $_GET['date_to'] : date("Y-m-d");
                 <tr>
                     <th class="text-center p-0">#</th>
                     <th class="text-center p-0">Product Code</th>
-                    <th class="text-center p-0">Nom du Produit</th>
+                    <th class="text-center p-0">Désignation</th>
                     <th class="text-center p-0">Qte</th>
                     <th class="text-center p-0">Qte Vendu</th>
                     <th class="text-center p-0">Qte en stock</th>
-                    <th class="text-center p-10">Qte Reel</th>
+                    <th class="text-center p-10">Qte Réel</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -106,7 +106,7 @@ $dto = isset($_GET['date_to']) ? $_GET['date_to'] : date("Y-m-d");
             } else {
                 date_range = "<?php echo date('M d, Y', strtotime($dfrom)) . ' - ' . date('M d, Y', strtotime($dto)) ?>";
             }
-            el.append("<div class='text-center lh-1 fw-bold'>Pharmacy's Sales Report<br/>As of<br/>" + date_range + "</div><hr/>")
+            el.append("<div class='text-center lh-1 fw-bold'>Pharmacy's Inventtory Report<br/>As of<br/>" + date_range + "</div><hr/>")
             p.find('a').addClass('text-decoration-none')
             el.append(p)
             var nw = window.open("", "", "width=500,height=900")
@@ -126,4 +126,26 @@ $dto = isset($_GET['date_to']) ? $_GET['date_to'] : date("Y-m-d");
         // })
     })
 
+    window.jsPDF = window.jspdf.jsPDF;
+
+    // Convert HTML content to PDF
+    function Convert_HTML_To_PDF() {
+        var doc = new jsPDF();
+
+        // Source HTMLElement or a string containing HTML.
+        var elementHTML = document.querySelector("#outprint");
+
+        doc.html(elementHTML, {
+            callback: function(doc) {
+                // Save the PDF
+                doc.save('document-html.pdf');
+            },
+            margin: [10, 10, 10, 10],
+            autoPaging: 'text',
+            x: 0,
+            y: 0,
+            width: 190, //target width in the PDF document
+            windowWidth: 675 //window width in CSS pixels
+        });
+    }
 </script>
