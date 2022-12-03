@@ -4,7 +4,7 @@ $dto = isset($_GET['date_to']) ? $_GET['date_to'] : date("Y-m-d");
 ?>
 <div class="card rounded-0 shadow">
     <div class="card-header d-flex justify-content-between">
-        <h3 class="card-title">Inventory Report</h3>
+        <h3 class="card-title">Report Inventaire</h3>
     </div>
     <div class="card-body">
         <h5>Filter</h5>

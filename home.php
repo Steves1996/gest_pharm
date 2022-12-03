@@ -33,7 +33,7 @@
                                         <span class="fas fa-shopping-bag fs-3 text-secondary"></span>
                                     </div>
                                     <div class="col-auto flex-grow-1">
-                                        <div class="fs-5"><b>Products</b></div>
+                                        <div class="fs-5"><b>Produits</b></div>
                                         <div class="fs-6 text-end fw-bold">
                                             <?php 
                                             $product = $conn->query("SELECT count(product_id) as `count` FROM `product_list` where delete_flag = 0 ")->fetch_array()['count'];
@@ -83,7 +83,7 @@
                                         <span class="fa fa-coins fs-3 text-warning"></span>
                                     </div>
                                     <div class="col-auto flex-grow-1">
-                                        <div class="fs-5"><b>Today's Sales</b></div>
+                                        <div class="fs-5"><b>Vente du Jour</b></div>
                                         <div class="fs-6 text-end fw-bold">
                                             <?php 
                                             $sales = $conn->query("SELECT sum(total) as `total` FROM `transaction_list` where date(date_added) = date(CURRENT_TIMESTAMP) ".(($_SESSION['type'] != 1)? " and user_id = '{$_SESSION['user_id']}' " : ""))->fetch_array()[0];
@@ -99,7 +99,7 @@
                 <hr>
                 <div class="row">
                     <div class="col-12">
-                        <h3>Stock Disponible</h3>
+                        <h3>Produit Disponible</h3>
                         <hr>
                         <table class="table table-striped table-hover table-bordered" id="inventory">
                             <colgroup>
@@ -110,10 +110,10 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th class="py-0 px-1">Category</th>
+                                    <th class="py-0 px-1">Catégorie</th>
                                     <th class="py-0 px-1">Product Code</th>
-                                    <th class="py-0 px-1">Product Name</th>
-                                    <th class="py-0 px-1">Available Quantity</th>
+                                    <th class="py-0 px-1">Désignation</th>
+                                    <th class="py-0 px-1">Quantité disponible</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -134,7 +134,7 @@
                                         <td class="td py-0 px-1"><?php echo $row['name'] ?></td>
                                         <td class="td py-0 px-1 text-end">
                                             <?php  if($_SESSION['type'] == 1): ?>
-                                            <?php echo $qty < $row['alert_restock']? "<a href='javascript:void(0)' class='restock me-1' data-pid = '".$row['product_id']."' data-name = '".$row['product_code'].' - '.$row['name']."'> Restock</a>":'' ?>
+                                            <?php echo $qty < $row['alert_restock']? "<a href='javascript:void(0)' class='restock me-1' data-pid = '".$row['product_id']."' data-name = '".$row['product_code'].' - '.$row['name']."'> Ajouter une quantité</a>":'' ?>
                                             <?php endif; ?>
                                             <?php echo $qty ?></td>
                                     </tr>

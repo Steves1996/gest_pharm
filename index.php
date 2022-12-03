@@ -151,31 +151,31 @@ if($_SESSION['type'] != 1 && in_array($page,array('maintenance','products','stoc
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link <?php echo ($page == 'home')? 'active' : '' ?>" aria-current="page" href="./">Home</a>
+                        <a class="nav-link <?php echo ($page == 'home')? 'active' : '' ?>" aria-current="page" href="./">Accueil</a>
                     </li>
                     <?php if($_SESSION['type'] == 1): ?>
                     <li class="nav-item">
-                        <a class="nav-link  <?php echo ($page == 'products')? 'active' : '' ?>" href="./?page=products">Products</a>
+                        <a class="nav-link  <?php echo ($page == 'products')? 'active' : '' ?>" href="./?page=products">Produits</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link  <?php echo ($page == 'stocks')? 'active' : '' ?>" href="./?page=stocks">Stocks</a>
                     </li>
                     <?php endif; ?>
                     <li class="nav-item">
-                        <a class="nav-link  <?php echo ($page == 'sales')? 'active' : '' ?>" href="./?page=sales">POS</a>
+                        <a class="nav-link  <?php echo ($page == 'sales')? 'active' : '' ?>" href="./?page=sales">Vente</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  <?php echo ($page == 'sales_report')? 'active' : '' ?>" href="./?page=sales_report">Sales</a>
+                        <a class="nav-link  <?php echo ($page == 'sales_report')? 'active' : '' ?>" href="./?page=sales_report">Liste Ventes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link  <?php echo ($page == 'inventory_report')? 'active' : '' ?>" href="./?page=inventory_report">Inventaire</a>
                     </li>
                     <?php if($_SESSION['type'] == 1): ?>
                     <li class="nav-item">
-                        <a class="nav-link <?php echo ($page == 'users')? 'active' : '' ?>" aria-current="page" href="./?page=users">Users</a>
+                        <a class="nav-link <?php echo ($page == 'users')? 'active' : '' ?>" aria-current="page" href="./?page=users">Utilisateurs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./?page=maintenance">Maintenance</a>
+                        <a class="nav-link" href="./?page=maintenance">Catégories</a>
                     </li>
                     <?php endif; ?>
                     

@@ -11,7 +11,7 @@ $qry = $conn->query("SELECT * FROM `category_list` where category_id = '{$_GET['
     <form action="" id="category-form">
         <input type="hidden" name="id" value="<?php echo isset($category_id) ? $category_id : '' ?>">
         <div class="form-group">
-            <label for="name" class="control-label">Name</label>
+            <label for="name" class="control-label">Nom</label>
             <input type="text" name="name" autofocus id="name" required class="form-control form-control-sm rounded-0" value="<?php echo isset($name) ? $name : '' ?>">
         </div>
         <div class="form-group">

@@ -1,9 +1,9 @@
 
 <div class="card rounded-0 shadow">
     <div class="card-header d-flex justify-content-between">
-        <h3 class="card-title">Users List</h3>
+        <h3 class="card-title">Liste des Utilisateurs</h3>
         <div class="card-tools align-middle">
-            <button class="btn btn-dark btn-sm py-1 rounded-0" type="button" id="create_new">Add New</button>
+            <button class="btn btn-dark btn-sm py-1 rounded-0" type="button" id="create_new">Ajouter un Utilisateur</button>
         </div>
     </div>
     <div class="card-body">
@@ -18,8 +18,8 @@
             <thead>
                 <tr>
                     <th class="text-center p-0">#</th>
-                    <th class="text-center p-0">Name</th>
-                    <th class="text-center p-0">Username</th>
+                    <th class="text-center p-0">Nom</th>
+                    <th class="text-center p-0">Login</th>
                     <th class="text-center p-0">Type</th>
                     <th class="text-center p-0">Action</th>
                 </tr>

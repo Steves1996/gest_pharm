@@ -1,7 +1,7 @@
 
 <div class="card h-100 d-flex flex-column rounded-0 shadow">
     <div class="card-header d-flex justify-content-between">
-        <h3 class="card-title">Maintenance</h3>
+        <h3 class="card-title">Catégories</h3>
         <div class="card-tools align-middle">
             <!-- <button class="btn btn-dark btn-sm py-1 rounded-0" type="button" id="create_new">Add New</button> -->
         </div>
@@ -11,7 +11,7 @@
             <div class="row h-100">
                 <div class="col-md-6 h-100 d-flex flex-column">
                     <div class="w-100 d-flex border-bottom border-dark py-1 mb-1">
-                        <div class="fs-5 col-auto flex-grow-1"><b>Category List</b></div>
+                        <div class="fs-5 col-auto flex-grow-1"><b>Liste des Catégories</b></div>
                         <div class="col-auto flex-grow-0 d-flex justify-content-end">
                             <a href="javascript:void(0)" id="new_category" class="btn btn-dark btn-sm bg-gradient rounded-2" title="Add Category"><span class="fa fa-plus"></span></a>
                         </div>
@@ -56,7 +56,7 @@
     $(function(){
         // Category Functions
         $('#new_category').click(function(){
-            uni_modal('Add New Category',"manage_category.php")
+            uni_modal('Ajouter une Catégorie',"manage_category.php")
         })
         $('.edit_category').click(function(){
             uni_modal('Edit Category Details',"manage_category.php?id="+$(this).attr('data-id'))

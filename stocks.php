@@ -1,9 +1,9 @@
 
 <div class="card rounded-0 shadow">
     <div class="card-header d-flex justify-content-between">
-        <h3 class="card-title">Stock List</h3>
+        <h3 class="card-title">Quantité des Produits</h3>
         <div class="card-tools align-middle">
-            <button class="btn btn-dark btn-sm py-1 rounded-0" type="button" id="create_new">Add New</button>
+            <button class="btn btn-dark btn-sm py-1 rounded-0" type="button" id="create_new">Ajouer une Quantité a un Produit</button>
         </div>
     </div>
     <div class="card-body">
@@ -19,10 +19,10 @@
             <thead>
                 <tr>
                     <th class="text-center p-0">#</th>
-                    <th class="text-center p-0">Date Added</th>
-                    <th class="text-center p-0">Product</th>
-                    <th class="text-center p-0">Quantity</th>
-                    <th class="text-center p-0">Expiry</th>
+                    <th class="text-center p-0">Date Ajout</th>
+                    <th class="text-center p-0">Produit</th>
+                    <th class="text-center p-0">Quantité</th>
+                    <th class="text-center p-0">Date Expiration</th>
                     <th class="text-center p-0">Action</th>
                 </tr>
             </thead>
@@ -63,7 +63,7 @@
 <script>
     $(function(){
         $('#create_new').click(function(){
-            uni_modal('Add New Stock',"manage_stock.php")
+            uni_modal('Ajouter un stock',"manage_stock.php")
         })
         $('.edit_data').click(function(){
             uni_modal('Edit Stock Details',"manage_stock.php?id="+$(this).attr('data-id'))

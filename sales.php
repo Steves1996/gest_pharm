@@ -3,10 +3,10 @@
         <div class="w-100 h-100 d-flex flex-column">
             <div class="row">
                 <div class="col-8">
-                    <h3>Transaction</h3>
+                    <h3>Vente</h3>
                 </div>
                 <div class="col-4 d-flex justify-content-end">
-                    <button class="btn btn-sm btn-primary rounded-0 " id="transaction-save-btn" type="button">Save Transaction</button>
+                    <button class="btn btn-sm btn-primary rounded-0 " id="transaction-save-btn" type="button">Valider la vente</button>
                 </div>
                 <div class="clear-fix mb-1"></div>
                 <hr>
@@ -21,7 +21,7 @@
                 <div class="w-100 h-100 mx-0 row row-cols-2 bg-dark">
                     <div class="col-8 h-100 pb-2 d-flex flex-column">
                         <div>
-                            <h3 class="text-light">Please select product below</h3>
+                            <h3 class="text-light">Sélectionner un produit</h3>
                         </div>
                         <div class="flex-grow-1 d-flex flex-column bg-light bg-opacity-50">
                             <div class="form-group py-2 d-flex border-bottom">
@@ -41,11 +41,11 @@
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th class="py-0 px-1">Category</th>
+                                            <th class="py-0 px-1">Catégories</th>
                                             <th class="py-0 px-1">Product Code</th>
                                             <th class="py-0 px-1">Product Name</th>
-                                            <th class="py-0 px-1">Price</th>
-                                            <th class="py-0 px-1">Available Quantity</th>
+                                            <th class="py-0 px-1">Prix</th>
+                                            <th class="py-0 px-1">Quantité Disponible</th>
                                         </tr>
                                     </thead>
                                 </table>
@@ -91,7 +91,7 @@
                             <div class="w-100 flex-grow-1">
                                 <div class="h-100 d-flex w-100 flex-column">
                                     <div class="d-flex">
-                                    <div class="fs-5 fw-bolder text-light flex-grow-1">Items</div>
+                                    <div class="fs-5 fw-bolder text-light flex-grow-1">élements</div>
                                     <div class="col-auto">
                                         <button class="btn btn-danger rounded-0 py-0" type="button" id="remove-item" disabled onclick="remove_item()"><i class="fa fa-trash"></i></button>
                                     </div>

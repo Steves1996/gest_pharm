@@ -1,9 +1,9 @@
 
 <div class="card rounded-0 shadow">
     <div class="card-header d-flex justify-content-between">
-        <h3 class="card-title">Product List</h3>
+        <h3 class="card-title">List des Produits</h3>
         <div class="card-tools align-middle">
-            <button class="btn btn-dark btn-sm py-1 rounded-0" type="button" id="create_new">Add New</button>
+            <button class="btn btn-dark btn-sm py-1 rounded-0" type="button" id="create_new">Nouveau Produit</button>
         </div>
     </div>
     <div class="card-body">
@@ -22,10 +22,10 @@
                 <tr>
                     <th class="text-center p-0">#</th>
                     <th class="text-center p-0">Code</th>
-                    <th class="text-center p-0">Category</th>
-                    <th class="text-center p-0">Product</th>
+                    <th class="text-center p-0">Catégories</th>
+                    <th class="text-center p-0">Produit</th>
                     <th class="text-center p-0">Price</th>
-                    <th class="text-center p-0">Alert</th>
+                    <th class="text-center p-0">Stock Alert</th>
                     <th class="text-center p-0">Status</th>
                     <th class="text-center p-0">Action</th>
                 </tr>
@@ -79,7 +79,7 @@
 <script>
     $(function(){
         $('#create_new').click(function(){
-            uni_modal('Add New Product',"manage_product.php",'mid-large')
+            uni_modal('Nouveau Produit',"manage_product.php",'mid-large')
         })
         $('.edit_data').click(function(){
             uni_modal('Edit Product Details',"manage_product.php?id="+$(this).attr('data-id'),'mid-large')

@@ -5,7 +5,7 @@ $dto = isset($_GET['date_to']) ? $_GET['date_to'] : date("Y-m-d");
 ?>
 <div class="card rounded-0 shadow">
     <div class="card-header d-flex justify-content-between">
-        <h3 class="card-title">Sales Report</h3>
+        <h3 class="card-title">Rapport des ventes</h3>
     </div>
     <div class="card-body">
         <h5>Filter</h5>
@@ -41,10 +41,10 @@ $dto = isset($_GET['date_to']) ? $_GET['date_to'] : date("Y-m-d");
                 <tr>
                     <th class="text-center p-0">#</th>
                     <th class="text-center p-0">Date</th>
-                    <th class="text-center p-0">Receipt No</th>
+                    <th class="text-center p-0">N° Recus</th>
                     <th class="text-center p-0">Items</th>
-                    <th class="text-center p-0">Total Amount</th>
-                    <th class="text-center p-0">Processed By</th>
+                    <th class="text-center p-0">Montant Total</th>
+                    <th class="text-center p-0">Vendu Par</th>
                 </tr>
             </thead>
             <tbody>

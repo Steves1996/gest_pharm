@@ -14,11 +14,11 @@ $qry = $conn->query("SELECT * FROM `product_list` where product_id = '{$_GET['id
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="product_code" class="control-label">Code</label>
+                        <label for="product_code" class="control-label">Code Produit</label>
                         <input type="text" name="product_code" autofocus id="product_code" required class="form-control form-control-sm rounded-0" value="<?php echo isset($product_code) ? $product_code : '' ?>">
                     </div>
                     <div class="form-group">
-                        <label for="category_id" class="control-label">Category</label>
+                        <label for="category_id" class="control-label">Catégorie</label>
                         <select name="category_id" id="category_id" class="form-select form-select-sm rounded-0 select2" required>
                             <option <?php echo (!isset($category_id)) ? 'selected' : '' ?> disabled>Please Select Here</option>
                             <?php
@@ -30,7 +30,7 @@ $qry = $conn->query("SELECT * FROM `product_list` where product_id = '{$_GET['id
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="name" class="control-label">Name</label>
+                        <label for="name" class="control-label">Désignation</label>
                         <input type="text" name="name"  id="name" required class="form-control form-control-sm rounded-0" value="<?php echo isset($name) ? $name : '' ?>">
                     </div>
                     <div class="form-group">
@@ -38,13 +38,13 @@ $qry = $conn->query("SELECT * FROM `product_list` where product_id = '{$_GET['id
                         <input type="number" step="any" name="price"  id="price" required class="form-control form-control-sm rounded-0 text-end" value="<?php echo isset($price) ? $price : '' ?>">
                     </div>
                     <div class="form-group">
-                        <label for="alert_restock" class="control-label">QTY Alert for Restock</label>
+                        <label for="alert_restock" class="control-label">Qantité alert</label>
                         <input type="number" step="any" name="alert_restock"  id="alert_restock" required class="form-control form-control-sm rounded-0 text-end" value="<?php echo isset($alert_restock) ? $alert_restock : '' ?>">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="description" class="control-label">Description</label>
+                        <label for="description" class="control-label">Dèscription</label>
                         <textarea name="description" id="description" cols="30" rows="3" class="form-control rounded-0" required><?php echo isset($description) ? $description : '' ?></textarea>
                     </div>
                     <div class="form-group">

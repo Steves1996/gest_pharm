@@ -15,7 +15,7 @@ if (isset($_GET['id'])) {
                 <div class="col-md-12">
                     <?php if (!isset($_GET['pid'])): ?>
                         <div class="form-group">
-                            <label for="product_id" class="control-label">Product</label>
+                            <label for="product_id" class="control-label">Produit</label>
                             <select name="product_id" id="product_id"
                                     class="form-select form-select-sm rounded-0 select2" required>
                                 <option <?php echo (!isset($product_id)) ? 'selected' : '' ?> disabled>Please Select
@@ -35,17 +35,13 @@ if (isset($_GET['id'])) {
 
                     <?php endif; ?>
                     <div class="form-group">
-                        <label for="quantity" class="control-label">Quantity</label>
+                        <label for="quantity" class="control-label">Quantité</label>
                         <input type="number" step="any" name="quantity" id="quantity" required
                                class="form-control form-control-sm rounded-0 text-end"
                                value="<?php echo isset($quantity) ? $quantity : '' ?>">
-                        <input type="hidden"
-                               id="total_qte"
-                               name="total_qte"
-                               value="<?php echo  $prod_id?>">
                     </div>
                     <div class="form-group">
-                        <label for="expiry_date" class="control-label">Expiry Date</label>
+                        <label for="expiry_date" class="control-label">Date Expiration</label>
                         <input type="date" name="expiry_date" id="expiry_date" required
                                class="form-control form-control-sm rounded-0"
                                value="<?php echo isset($expiry_date) ? date("Y-m-d", strtotime($expiry_date)) : '' ?>">
