@@ -53,11 +53,11 @@ if($_SESSION['type'] != 1 && in_array($page,array('maintenance','products','stoc
             flex-flow:column;
         }
         #page-container{
-            flex: 1 1 auto; 
+            flex: 1 1 auto;
             overflow:auto;
         }
         #topNavBar{
-            flex: 0 1 auto; 
+            flex: 0 1 auto;
         }
         .thumbnail-img{
             width:50px;
@@ -87,7 +87,7 @@ if($_SESSION['type'] != 1 && in_array($page,array('maintenance','products','stoc
             max-width: unset;
         }
         @media (max-width:720px){
-            
+
             .modal-dialog.large {
                 width: 100% !important;
                 max-width: unset;
@@ -95,8 +95,8 @@ if($_SESSION['type'] != 1 && in_array($page,array('maintenance','products','stoc
             .modal-dialog.mid-large {
                 width: 100% !important;
                 max-width: unset;
-            }  
-        
+            }
+
         }
         .display-select-image{
             width:60px;
@@ -116,17 +116,17 @@ if($_SESSION['type'] != 1 && in_array($page,array('maintenance','products','stoc
 
         /* Track */
         ::-webkit-scrollbar-track {
-        background: #f1f1f1; 
+        background: #f1f1f1;
         }
-        
+
         /* Handle */
         ::-webkit-scrollbar-thumb {
-        background: #888; 
+        background: #888;
         }
 
         /* Handle on hover */
         ::-webkit-scrollbar-thumb:hover {
-        background: #555; 
+        background: #555;
         }
         .img-del-btn{
             right: 2px;
@@ -167,10 +167,11 @@ if($_SESSION['type'] != 1 && in_array($page,array('maintenance','products','stoc
                     <li class="nav-item">
                         <a class="nav-link  <?php echo ($page == 'sales_report')? 'active' : '' ?>" href="./?page=sales_report">Liste Ventes</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link  <?php echo ($page == 'inventory_report')? 'active' : '' ?>" href="./?page=inventory_report">Inventaire</a>
-                    </li>
+
                     <?php if($_SESSION['type'] == 1): ?>
+                        <li class="nav-item">
+                            <a class="nav-link  <?php echo ($page == 'inventory_report')? 'active' : '' ?>" href="./?page=inventory_report">Inventaire</a>
+                        </li>
                     <li class="nav-item">
                         <a class="nav-link <?php echo ($page == 'users')? 'active' : '' ?>" aria-current="page" href="./?page=users">Utilisateurs</a>
                     </li>
@@ -178,7 +179,7 @@ if($_SESSION['type'] != 1 && in_array($page,array('maintenance','products','stoc
                         <a class="nav-link" href="./?page=maintenance">Catégories</a>
                     </li>
                     <?php endif; ?>
-                    
+
                 </ul>
             </div>
             <div>
@@ -195,7 +196,7 @@ if($_SESSION['type'] != 1 && in_array($page,array('maintenance','products','stoc
         </div>
     </nav>
     <div class="container py-3" id="page-container">
-        <?php 
+        <?php
             if(isset($_SESSION['flashdata'])):
         ?>
         <div class="dynamic_alert alert alert-<?php echo $_SESSION['flashdata']['type'] ?> rounded-0 shadow">

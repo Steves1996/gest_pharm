@@ -7,21 +7,21 @@ $dto = isset($_GET['date_to']) ? $_GET['date_to'] : date("Y-m-d");
         <h3 class="card-title">Report Inventaire</h3>
     </div>
     <div class="card-body">
-        <h5>Filter</h5>
+        <h5  style="display: none;">Filter</h5>
         <div class="row align-items-end">
             <div class="form-group col-md-2">
-                <label for="date_from" class="control-label">Date From</label>
-                <input type="date" name="date_from" id="date_from" value="<?php echo $dfrom ?>"
+                <label for="date_from" class="control-label" style="display: none;">Date From</label>
+                <input type="hidden" name="date_from" id="date_from" value="<?php echo $dfrom ?>"
                        class="form-control rounded-0">
             </div>
             <div class="form-group col-md-2">
-                <label for="date_to" class="control-label">Date To</label>
-                <input type="date" name="date_to" id="date_to" value="<?php echo $dto ?>"
+                <label for="date_to" class="control-label"  style="display: none;">Date To</label>
+                <input type="hidden" name="date_to" id="date_to" value="<?php echo $dto ?>"
                        class="form-control rounded-0">
             </div>
             <div class="form-group col-md-4 d-flex">
                 <div class="col-auto">
-                    <button class="btn btn-primary rounded-0" id="filter" type="button"><i class="fa fa-filter"></i>
+                    <button class="btn btn-primary rounded-0" id="filter" type="button"  style="display: none;"><i class="fa fa-filter"></i>
                         Filter
                     </button>
                     <button class="btn btn-success rounded-0" id="print" type="button" onclick="Convert_HTML_To_PDF()"><i class="fa fa-print"></i> Print
@@ -101,12 +101,7 @@ $dto = isset($_GET['date_to']) ? $_GET['date_to'] : date("Y-m-d");
             var p = $('#outprint').clone()
             var el = $('<div>')
             el.append(h)
-            if ('<?php echo $dfrom ?>' == '<?php echo $dto ?>') {
-                date_range = "<?php echo date('M d, Y', strtotime($dfrom)) ?>";
-            } else {
-                date_range = "<?php echo date('M d, Y', strtotime($dfrom)) . ' - ' . date('M d, Y', strtotime($dto)) ?>";
-            }
-            el.append("<div class='text-center lh-1 fw-bold'>Pharmacy's Inventtory Report<br/>As of<br/>" + date_range + "</div><hr/>")
+            el.append("<div class='text-center lh-1 fw-bold'>Pharmacy's Inventtory Report</div><hr/>")
             p.find('a').addClass('text-decoration-none')
             el.append(p)
             var nw = window.open("", "", "width=500,height=900")
